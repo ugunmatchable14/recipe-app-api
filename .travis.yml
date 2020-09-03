@@ -8,6 +8,6 @@ env:
 install:
   - pip install -r requirements.txt
 before_script:
-  - postgresql -e 'create database test;' -u root
+  - psql -c 'create database recipe_api_test;' -U postgres
 script:
   - python manage.py test && flake8
