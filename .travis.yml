@@ -10,4 +10,4 @@ install:
 before_script:
   - postgresql -e 'create database test;' -u root
 script:
-  - python manage.py test && flake8     
+  - python manage.py test && flake8
